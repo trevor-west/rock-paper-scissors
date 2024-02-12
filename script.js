@@ -99,3 +99,7 @@ function getHumanChoice() {
 // - Use conditional checks in the rockPaperScissorsGame function to compare the given output values of getComputerChoice and getHumanChoice to output who wins the game.
 
 // 3. PSEUDOCODE
+
+//  1. Create function rockPaperScissorsGame
+//  2. Use conditional checks to compare whether getHumanChoice or getComputerChoice wins given the rules of rock, paper, scissors
+//  3. Console.log a string depending on the outcome (as per above, like "You win! Paper beats rock" || "You lose! Paper beats rock")

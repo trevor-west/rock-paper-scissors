@@ -87,10 +87,15 @@ function getHumanChoice() {
   }
 }
 
+// BUILDING rockPaperScissorsGame FUNCTION
+// 1. UNDERSTAND
+// 'Write a function that plays a single round of Rock Paper Scissors. The function should take two parameters - the playerSelection and computerSelection - and then return a string that declares the winner or tie of the round like so: 
+// "You Lose! Paper beats Rock"
 
-/*
-BUILDING rockPaperScissorsGame FUNCTION
+// Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).'
 
+// 2. PLAN
+// - All in console, no interface
+// - Use conditional checks in the rockPaperScissorsGame function to compare the given output values of getComputerChoice and getHumanChoice to output who wins the game.
 
-
-*/
+// 3. PSEUDOCODE

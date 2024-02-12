@@ -15,10 +15,10 @@ So I need to make a function called getComputerChoice that returns randomly 'Roc
 
 
 // 3. PSEUDOCODE
-//   1. Create three variables to store the random values precedents for 'Rock', 'Paper' and 'Scissors' (the values could be the first value is equal to .33, the next .66, and then last one .99)
-let rock = 32;
-let paper = 65;
-let scissors = 99;
+//   1. Create three variables to store the random values precedents for 'Rock', 'Paper' and 'Scissors'
+let rock = 'Rock';
+let paper = 'Paper';
+let scissors = 'Scissors';
 
 // 2. Create a function to return a random number between 0 and 100.
 function getRandomNumber() {
@@ -35,12 +35,13 @@ function getRandomNumber() {
 //       100 -- repeat
 function getComputerChoice() {
   let computerChoice = getRandomNumber();
+  console.log("computerChoice value: " + computerChoice);
   if(computerChoice == 100) {
     computerChoice = getRandomNumber();
-  } else if(computerChoice > 0 && computerChoice <= 32) {
+  } else if(computerChoice >= 0 && computerChoice <= 32) {
     console.log("Computer's choice: Rock");
     return rock;
-  } else if (omputerChoice >= 33 && computerChoice <= 65) {
+  } else if (computerChoice >= 33 && computerChoice <= 65) {
     console.log("Computer's choice: Paper");
   } else if (computerChoice >= 66 && computerChoice <= 99) {
     console.log("Computer's choice: scissors");

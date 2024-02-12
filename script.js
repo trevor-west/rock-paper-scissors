@@ -75,10 +75,13 @@ function getHumanChoice() {
   if(humanChoice != "rock" || humanChoice != "paper" || humanChoice != "scissors") {
     humanChoice = prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):");
   } else if (humanChoice == "rock") {
+    console.log("Human choice: Rock");
     return rock;
   } else if (humanChoice == "paper") {
+    console.log("Human choice: Paper");
     return paper;
   } else if (humanChoice == "scissors") {
+    console.log("Human choice: Scissors");
     return scissors;
   } else {
     console.log("An unknown error has occurred.")

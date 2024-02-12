@@ -45,8 +45,9 @@ function getComputerChoice() {
     return rock;
   } else if (computerChoice >= 33 && computerChoice <= 65) {
     console.log("Computer's choice: Paper");
+    return paper;
   } else if (computerChoice >= 66 && computerChoice <= 99) {
-    console.log("Computer's choice: scissors");
+    console.log("Computer's choice: Scissors");
     return scissors;
   } else {
     console.log("An unknown error has occurred.");

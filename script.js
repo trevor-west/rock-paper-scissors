@@ -53,20 +53,37 @@ function getComputerChoice() {
   }
 }
 
-/*
-BUILDING getHumanChoice FUNCTION
-1. UNDERSTAND
-Create the same code as getComputerChoice function but get the input by a prompt to the user. Same as getComputerChoice function, the getHumanChoice function will ultimately return the value Rock, Paper, or Scissors (minus the need
-  for creating a random number, so no need for the function getRandomNumber).
+// BUILDING getHumanChoice FUNCTION
+// 1. UNDERSTAND
+// Create the same code as getComputerChoice function but get the input by a prompt to the user. Same as getComputerChoice function, the getHumanChoice function will ultimately return the value Rock, Paper, or Scissors (minus the need
+//   for creating a random number, so no need for the function getRandomNumber).
 
-2. PLAN
-- All in console, no interface
-- Use the prompt method to get the given input from the user (either rock, paper, or scissors case insensitive -- if the user types anything else prompt again or return a message saying that isn't a valid entry)
+// 2. PLAN
+// - All in console, no interface
+// - Use the prompt method to get the given input from the user (either rock, paper, or scissors case insensitive -- if the user types anything else prompt again or return a message saying that isn't a valid entry)
 
-3. PSEUDOCODE
-  1. Get input value from the user (either "Rock", "Papers" or "Scissors" as a string)
-  2. Create a conditional check to ask the user to type again if they enter anything else (make this case insensitive so you can type "rOck" and it works etc.)
-*/
+
+// 3. PSEUDOCODE
+//   1. 
+
+//   2. Create a function that runs a conditional check to ask the user to type again if they enter anything else
+function getHumanChoice() {
+  // Get input value from the user (either "Rock", "Papers" or "Scissors" as a string)
+  let humanChoice = prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):");
+  // (make this case insensitive so you can type "rOck" and it works etc.)
+  humanChoice = humanChoice.toLowerCase();
+  if(humanChoice != "rock" || humanChoice != "paper" || humanChoice != "scissors") {
+    humanChoice = prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):");
+  } else if (humanChoice == "rock") {
+    return rock;
+  } else if (humanChoice == "paper") {
+    return paper;
+  } else if (humanChoice == "scissors") {
+    return scissors;
+  } else {
+    console.log("An unknown error has occurred.")
+  }
+}
 
 
 /*

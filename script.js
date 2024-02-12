@@ -35,14 +35,14 @@ function getRandomNumber() {
 //       100 -- repeat
 function getComputerChoice() {
   let computerChoice = getRandomNumber();
-  if(getRandomNumber() == 100) {
+  if(computerChoice == 100) {
     computerChoice = getRandomNumber();
-  } else if(computerChoice == 32 || computerChoice > 32 && computerChoice < 33) {
+  } else if(computerChoice > 0 && computerChoice <= 32) {
     console.log("Computer's choice: Rock");
     return rock;
-  } else if (computerChoice == 65 || computerChoice > 33 && computerChoice < 66) {
+  } else if (omputerChoice >= 33 && computerChoice <= 65) {
     console.log("Computer's choice: Paper");
-  } else if (computerChoice == 99 || computerChoice > 65 && computerChoice < 100) {
+  } else if (computerChoice >= 66 && computerChoice <= 99) {
     console.log("Computer's choice: scissors");
     return scissors;
   } else {

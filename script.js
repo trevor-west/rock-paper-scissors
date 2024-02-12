@@ -106,7 +106,7 @@ function getHumanChoice() {
 //  1. Create function rockPaperScissorsGame
 function rockPaperScissorsGame() {
 //  2. Use conditional checks to compare whether getHumanChoice or getComputerChoice wins given the rules of rock, paper, scissors
-  if (getHumanChoice )
+  if ()
 }
 
 //  3. Console.log a string depending on the outcome (as per above, like "You win! Paper beats rock" || "You lose! Paper beats rock")

@@ -36,8 +36,7 @@ function getRandomNumber() {
 function getComputerChoice() {
   if(getRandomNumber() == 100) {
     continue;
-  }
-  if(getRandomNumber() == 32 || getRandomNumber() > 32 && getRandomNumber() < 33) {
+  } else if(getRandomNumber() == 32 || getRandomNumber() > 32 && getRandomNumber() < 33) {
     console.log("Computer's choice: Rock");
     return rock;
   } else if (getRandomNumber() == 65 || getRandomNumber() > 33 && getRandomNumber() < 66) {

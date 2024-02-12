@@ -15,9 +15,9 @@ So I need to make a function called getComputerChoice that returns randomly 'Roc
 
 // 3. PSEUDOCODE
 //   1. Create three variables to store the random values precedents for 'Rock', 'Paper' and 'Scissors'
-let rock = 'Rock';
-let paper = 'Paper';
-let scissors = 'Scissors';
+let computerRock = 'Rock';
+let computerPaper = 'Paper';
+let computerScissors = 'Scissors';
 
 // 2. Create a function to return a random number between 0 and 100.
 function getRandomNumber() {
@@ -41,13 +41,13 @@ function getComputerChoice() {
     computerChoice = getRandomNumber();
   } else if(computerChoice >= 0 && computerChoice <= 32) {
     console.log("Computer's choice: Rock");
-    return rock;
+    return computerRock;
   } else if (computerChoice >= 33 && computerChoice <= 65) {
     console.log("Computer's choice: Paper");
-    return paper;
+    return computerPaper;
   } else if (computerChoice >= 66 && computerChoice <= 99) {
     console.log("Computer's choice: Scissors");
-    return scissors;
+    return computerScissors;
   } else {
     console.log("An unknown error has occurred.");
   }
@@ -64,7 +64,10 @@ function getComputerChoice() {
 
 
 // 3. PSEUDOCODE
-//   1. 
+//   1. Create variables to store human choice values
+let humanRock = 'Rock';
+let humanPaper = 'Paper';
+let humanScissors = 'Scissors';
 
 //   2. Create a function that runs a conditional check to ask the user to type again if they enter anything else
 function getHumanChoice() {
@@ -73,13 +76,13 @@ function getHumanChoice() {
   // Conditional checks for humanChoice to determine Rock, Paper, or Scissors
   if (humanChoice == "rock") {
     console.log("Human choice: Rock");
-    return rock;
+    return humanRock;
   } else if (humanChoice == "paper") {
     console.log("Human choice: Paper");
-    return paper;
+    return humanPaper;
   } else if (humanChoice == "scissors") {
     console.log("Human choice: Scissors");
-    return scissors;
+    return humanScissors;
   } else if(humanChoice !== "rock" || humanChoice !== "paper" || humanChoice !== "scissors") {
     humanChoice = (prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):", "Rock")).toLowerCase();
   } else {
@@ -101,5 +104,9 @@ function getHumanChoice() {
 // 3. PSEUDOCODE
 
 //  1. Create function rockPaperScissorsGame
+function rockPaperScissorsGame() {
 //  2. Use conditional checks to compare whether getHumanChoice or getComputerChoice wins given the rules of rock, paper, scissors
+  if (getHumanChoice )
+}
+
 //  3. Console.log a string depending on the outcome (as per above, like "You win! Paper beats rock" || "You lose! Paper beats rock")

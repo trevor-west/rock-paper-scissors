@@ -34,14 +34,15 @@ function getRandomNumber() {
 //       66, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 -- Scissors
 //       100 -- repeat
 function getComputerChoice() {
+  let computerChoice = getRandomNumber();
   if(getRandomNumber() == 100) {
-    continue;
-  } else if(getRandomNumber() == 32 || getRandomNumber() > 32 && getRandomNumber() < 33) {
+    computerChoice = getRandomNumber();
+  } else if(computerChoice == 32 || computerChoice > 32 && computerChoice < 33) {
     console.log("Computer's choice: Rock");
     return rock;
-  } else if (getRandomNumber() == 65 || getRandomNumber() > 33 && getRandomNumber() < 66) {
+  } else if (computerChoice == 65 || computerChoice > 33 && computerChoice < 66) {
     console.log("Computer's choice: Paper");
-  } else if (getRandomNumber() == 99 || getRandomNumber() > 65 && getRandomNumber() < 100) {
+  } else if (computerChoice == 99 || computerChoice > 65 && computerChoice < 100) {
     console.log("Computer's choice: scissors");
     return scissors;
   } else {

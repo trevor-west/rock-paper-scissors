@@ -69,12 +69,10 @@ function getComputerChoice() {
 //   2. Create a function that runs a conditional check to ask the user to type again if they enter anything else
 function getHumanChoice() {
   // Get input value from the user (either "Rock", "Papers" or "Scissors" as a string)
-  let humanChoice = prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):");
+  let humanChoice = (prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):", "Rock")).toLowerCase();
   // (make this case insensitive so you can type "rOck" and it works etc.)
-  humanChoice = humanChoice.toLowerCase();
-  if(humanChoice != "rock" || humanChoice != "paper" || humanChoice != "scissors") {
-    humanChoice = prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):");
-  } else if (humanChoice == "rock") {
+  // humanChoice = humanChoice.toLowerCase();
+  if (humanChoice == "rock") {
     console.log("Human choice: Rock");
     return rock;
   } else if (humanChoice == "paper") {
@@ -83,6 +81,8 @@ function getHumanChoice() {
   } else if (humanChoice == "scissors") {
     console.log("Human choice: Scissors");
     return scissors;
+  } else if(humanChoice !== "rock" || humanChoice !== "paper" || humanChoice !== "scissors") {
+    humanChoice = (prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):", "Rock")).toLowerCase();
   } else {
     console.log("An unknown error has occurred.")
   }

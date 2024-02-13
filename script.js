@@ -105,7 +105,10 @@ function getHumanChoice() {
 
 //  1. Create function rockPaperScissorsGame
 function rockPaperScissorsGame() {
-//  2. Use conditional checks to compare whether getHumanChoice or getComputerChoice wins given the rules of rock, paper, scissors
+//  2. Run functions to get game values
+  getComputerChoice();
+  getHumanChoice;
+//  3. Use conditional checks to compare whether getHumanChoice or getComputerChoice wins given the rules of rock, paper, scissors
   if ()
 }
 

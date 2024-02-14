@@ -139,7 +139,35 @@ function rockPaperScissorsGame() {
 // CREATE printRoundScore FUNCTION
 
 // 1. UNDERSTAND
-// Create a function that prints the current round score for the rock paper scissors game.
+// Create a function that prints the current round score for the rock paper scissors game.=
+
+// 2. PLAN
+// - Interface all in console.
+
+// 3. CODE -- skipping PSEUDOCODE because I already built it in the playGame function and am just moving it here:
+function printRoundScore() {
+  return console.log(
+    `Round ${x}: 
+    Human choice: ${humanChoice}
+    Computer choice: ${computerChoice}
+    Human score: ${humanWins}
+    Computer score: ${computerWins}`)
+}
+
+// CREATE printFinalScore FUNCTION
+
+// 1. UNDERSTAND / 2. PLAN
+// Same as printRoundScore function but with text for final round.
+
+// 3. CODE
+function printFinalScore() {
+  console.log(`
+  Total number of rounds: ${x}
+  Final score:
+  Human score: ${humanWins}
+  Computer score: ${computerWins}
+  `)
+}
 
 
 // BUIDLING playGame FUNCTION
@@ -160,28 +188,13 @@ function playGame() {
 //   and adding the results of each game loop to humanScore and/or computerScore
   for (let x = 1; x < 6; x++) {
     rockPaperScissorsGame();
-    console.log(
-      `Round ${x}: 
-      Human choice: ${humanChoice}
-      Computer choice: ${computerChoice}
-      Human score: ${humanWins}
-      Computer score: ${computerWins}`)
+    
   }
   if (humanWins == computerWins) {
-    console.log(`
-    Total number of rounds: ${x}
-    Final score:
-    Human score: ${humanWins}
-    Computer score: ${computerWins}
-    `)
+
     return "It's a tie game!";
   } else if (humanWins > computerWins) {
-    console.log(`
-    Total number of rounds: ${x}
-    Final score:
-    Human score: ${humanWins}
-    Computer score: ${computerWins}
-    `)
+
     return "You won the game! Congrats!!! <(^_^<) (>^_^)>";
   } else if (computerWins > humanWins) {
     return "You lost the game! Well, we can't win them all -- give it another try! :)";

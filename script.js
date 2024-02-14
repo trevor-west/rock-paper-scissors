@@ -132,9 +132,15 @@ function rockPaperScissorsGame() {
   } else if (computerChoice == scissors && humanChoice == paper) {
     return computerWins++;
   } else {
-    return "An unknown error has occurred.";
+    return console.error("An unknown error has occurred.");
   }
 }
+
+// CREATE printRoundScore FUNCTION
+
+// 1. UNDERSTAND
+// Create a function that prints the current round score for the rock paper scissors game.
+
 
 // BUIDLING playGame FUNCTION
 
@@ -152,12 +158,30 @@ function rockPaperScissorsGame() {
 function playGame() {
 //   2. Create a for loop that starts at 0 and runs 5 times, repeating the rockPaperScissorsGame function each time 
 //   and adding the results of each game loop to humanScore and/or computerScore
-  for (let x = 0; x < 5; x++) {
+  for (let x = 1; x < 6; x++) {
     rockPaperScissorsGame();
+    console.log(
+      `Round ${x}: 
+      Human choice: ${humanChoice}
+      Computer choice: ${computerChoice}
+      Human score: ${humanWins}
+      Computer score: ${computerWins}`)
   }
   if (humanWins == computerWins) {
+    console.log(`
+    Total number of rounds: ${x}
+    Final score:
+    Human score: ${humanWins}
+    Computer score: ${computerWins}
+    `)
     return "It's a tie game!";
   } else if (humanWins > computerWins) {
+    console.log(`
+    Total number of rounds: ${x}
+    Final score:
+    Human score: ${humanWins}
+    Computer score: ${computerWins}
+    `)
     return "You won the game! Congrats!!! <(^_^<) (>^_^)>";
   } else if (computerWins > humanWins) {
     return "You lost the game! Well, we can't win them all -- give it another try! :)";

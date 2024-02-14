@@ -15,9 +15,9 @@ So I need to make a function called getComputerChoice that returns randomly 'Roc
 
 // 3. PSEUDOCODE
 //   1. Create three variables to store the random values precedents for 'Rock', 'Paper' and 'Scissors'
-let computerRock = 'Rock';
-let computerPaper = 'Paper';
-let computerScissors = 'Scissors';
+// let computerRock = 'Rock';
+// let computerPaper = 'Paper';
+// let computerScissors = 'Scissors';
 
 // 2. Create a function to return a random number between 0 and 100.
 function getRandomNumber() {
@@ -38,18 +38,21 @@ let computerChoice;
 
 function getComputerChoice() {
   computerChoice = getRandomNumber();
-  console.log("computerChoice value: " + computerChoice);
+  // console.log("computerChoice value: " + computerChoice);
   if(computerChoice == 100) {
     computerChoice = getRandomNumber();
   } else if(computerChoice >= 0 && computerChoice <= 32) {
     console.log("Computer's choice: Rock");
-    return computerRock;
+    computerChoice = 'rock';
+    return computerChoice;
   } else if (computerChoice >= 33 && computerChoice <= 65) {
     console.log("Computer's choice: Paper");
-    return computerPaper;
+    computerChoice = 'paper';
+    return computerChoice;
   } else if (computerChoice >= 66 && computerChoice <= 99) {
     console.log("Computer's choice: Scissors");
-    return computerScissors;
+    computerChoice = 'scissors';
+    return computerChoice;
   } else {
     console.log("An unknown error has occurred.");
   }
@@ -67,9 +70,9 @@ function getComputerChoice() {
 
 // 3. PSEUDOCODE
 //   1. Create variables to store human choice values
-let humanRock = 'Rock';
-let humanPaper = 'Paper';
-let humanScissors = 'Scissors';
+let rock = 'Rock';
+let paper = 'Paper';
+let scissors = 'Scissors';
 
 let humanChoice;
 
@@ -80,13 +83,13 @@ function getHumanChoice() {
   // Conditional checks for humanChoice to determine Rock, Paper, or Scissors
   if (humanChoice == "rock") {
     console.log("Human choice: Rock");
-    return humanRock;
+    return rock;
   } else if (humanChoice == "paper") {
     console.log("Human choice: Paper");
-    return humanPaper;
+    return paper;
   } else if (humanChoice == "scissors") {
     console.log("Human choice: Scissors");
-    return humanScissors;
+    return scissors;
   } else if(humanChoice !== "rock" || humanChoice !== "paper" || humanChoice !== "scissors") {
     humanChoice = (prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):", "Rock")).toLowerCase();
   } else {
@@ -118,17 +121,19 @@ function rockPaperScissorsGame() {
 //   console.log("Its a tie!");
   if (humanChoice == computerChoice) {
     console.log("Its a tie! Try again!");
-  } else if (humanChoice == humanRock && computerChoice == computerScissors) {
+  } else if (humanChoice == rock && computerChoice == scissors) {
     console.log("You win! Rock beats scissors!");
-  } else if (computerChoice == computerScissors && humanChoice == humanScissors) {
+  } else if (computerChoice == scissors && humanChoice == scissors) {
     console.log("You lose! Rock beats scissors!");
-  } else if (humanChoice == humanPaper && computerChoice == computerRock) {
+  } else if (humanChoice == paper && computerChoice == rock) {
     console.log("You win! Paper beats rock!");
-  } else if (computerChoice == computerPaper && humanChoice == humanRock) {
+  } else if (computerChoice == paper && humanChoice == rock) {
     console.log("You lose! Paper beats rock!");
-  } else if (humanChoice == humanScissors && computerChoice == computerPaper) {
+  } else if (humanChoice == scissors && computerChoice == paper) {
     console.log("You win! Scissors beats paper!");
-  } else if (computerChoice == computerScissors && humanChoice == humanPaper) {
+  } else if (computerChoice == scissors && humanChoice == paper) {
     console.log("You lose! Scissors beats paper!");
-  } 
+  } else {
+    console.log("An unknown error has occurred.")
+  }
 }

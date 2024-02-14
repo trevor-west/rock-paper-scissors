@@ -109,9 +109,12 @@ function rockPaperScissorsGame() {
   getComputerChoice(); // get computerChoice
   getHumanChoice(); // get humanChoice
 //  3. Use conditional checks to compare whether getHumanChoice or getComputerChoice wins given the rules of rock, paper, scissors
-  if (humanChoice && computerChoice == 'rock' || humanChoice && computerChoice == 'paper' || humanChoice && computerChoice == 'scissors') {
-  console.log("Its a tie!");
-}
+//   if (humanChoice && computerChoice == 'rock' || humanChoice && computerChoice == 'paper' || humanChoice && computerChoice == 'scissors') {
+//   console.log("Its a tie!");
+  if (humanChoice == computerChoice) {
+    console.log("Its a tie!");
+  }
+// }  else if (humanChoice == computerChoice)
 }
 
 //  3. Console.log a string depending on the outcome (as per above, like "You win! Paper beats rock" || "You lose! Paper beats rock")

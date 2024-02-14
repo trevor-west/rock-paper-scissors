@@ -137,3 +137,24 @@ function rockPaperScissorsGame() {
     return "An unknown error has occurred.";
   }
 }
+
+// BUIDLING playGame FUNCTION
+/*
+1. UNDERSTAND
+Take the rockkPaperScissorsGame function and run it in a loop five times, track the score and then print at the end
+who won (human player or computer player).
+
+2. PLAN
+- All in console, no interface
+- Use a traditional for loop alongside a unique variable for the human and computer score and then run a conditional
+check at the end to see who wins and return that result in the console.
+
+3. PSEUDOCODE
+  1. Create a function called playGame with the variables humanScore and computerScore in the parentheses
+
+  2. Create a for loop that starts at 0 and runs 5 times, repeating the rockPaperScissorsGame function each time 
+  and adding the results of each game loop to humanScore and/or computerScore
+
+  3. Return the result of the 5 rounds of game and print this is the console.
+
+*/

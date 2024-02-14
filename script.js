@@ -167,6 +167,15 @@ function playGame(humanScore, computerScore) {
   for (let x = 0; x < 5; x++) {
     rockPaperScissorsGame();
   }
+  if (humanWins == computerWins) {
+    return "It's a tie game!";
+  } else if (humanWins > computerWins) {
+    return "You won the game! Congrats!!! <(^_^<) (>^_^)>";
+  } else if (computerWins > humanWins) {
+    return "You lost the game! Well, we can't win them all -- give it another try! :)";
+  } else {
+    return "An unknown error has occurred.";
+  }
 }
 
 

@@ -112,9 +112,20 @@ function rockPaperScissorsGame() {
 //   if (humanChoice && computerChoice == 'rock' || humanChoice && computerChoice == 'paper' || humanChoice && computerChoice == 'scissors') {
 //   console.log("Its a tie!");
   if (humanChoice == computerChoice) {
-    console.log("Its a tie!");
-  }
-// }  else if (humanChoice == computerChoice)
+    console.log("Its a tie! Try again!");
+  } else if (humanChoice == humanRock && computerChoice == computerScissors) {
+    console.log("You win! Rock beats scissors!");
+  } else if (computerChoice == computerScissors && humanChoice == humanScissors) {
+    console.log("You lose! Rock beats scissors!");
+  } else if (humanChoice == humanPaper && computerChoice == computerRock) {
+    console.log("You win! Paper beats rock!");
+  } else if (computerChoice == computerPaper && humanChoice == humanRock) {
+    console.log("You lose! Paper beats rock!");
+  } else if (humanChoice == humanScissors && computerChoice == computerPaper) {
+    console.log("You win! Scissors beats paper!");
+  } else if (computerChoice == computerScissors && humanChoice == humanPaper) {
+    console.log("You lose! Scissors beats paper!");
+  } 
 }
 
 //  3. Console.log a string depending on the outcome (as per above, like "You win! Paper beats rock" || "You lose! Paper beats rock")

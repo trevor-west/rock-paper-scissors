@@ -126,35 +126,17 @@ function rockPaperScissorsGame() {
   if (humanChoice == computerChoice) {
     return "Its a tie! Try again!";
   } else if (humanChoice == rock && computerChoice == scissors) {
-    console.log("Human choice: " + rock);
-    console.log("Computer choice: " + rock);
     return humanWins++;
-    // return "You win! Rock beats scissors!";
   } else if (computerChoice == rock && humanChoice == scissors) {
-    console.log("Human choice: " + scissors);
-    console.log("Computer choice: " + rock);
     return computerWins++;
-    // return "You lose! Rock beats scissors!";
   } else if (humanChoice == paper && computerChoice == rock) {
-    console.log("Human choice: " + paper);
-    console.log("Computer choice: " + rock);
     return humanWins++;
-    // return "You win! Paper beats rock!";
   } else if (computerChoice == paper && humanChoice == rock) {
-    console.log("Human choice: " + rock);
-    console.log("Computer choice: " + paper);
     return computerWins++;
-    // return "You lose! Paper beats rock!";
   } else if (humanChoice == scissors && computerChoice == paper) {
-    console.log("Human choice: " + scissors);
-    console.log("Computer choice: " + paper);
     return humanWins++;
-    // return "You win! Scissors beats paper!";
   } else if (computerChoice == scissors && humanChoice == paper) {
-    console.log("Human choice: " + paper);
-    console.log("Computer choice: " + scissors);
     return computerWins++;
-    // return "You lose! Scissors beats paper!";
   } else {
     return "An unknown error has occurred.";
   }

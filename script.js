@@ -34,8 +34,10 @@ function getRandomNumber() {
 //       100 -- repeat
 //     3b. Print the resulting choice of Rock, Paper or Scissors to the console.
 
+let computerChoice;
+
 function getComputerChoice() {
-  let computerChoice = getRandomNumber();
+  computerChoice = getRandomNumber();
   console.log("computerChoice value: " + computerChoice);
   if(computerChoice == 100) {
     computerChoice = getRandomNumber();
@@ -69,10 +71,12 @@ let humanRock = 'Rock';
 let humanPaper = 'Paper';
 let humanScissors = 'Scissors';
 
+let humanChoice;
+
 //   2. Create a function that runs a conditional check to ask the user to type again if they enter anything else
 function getHumanChoice() {
   // Get input value from the user (either "Rock", "Papers" or "Scissors" as a string) and (make this case insensitive so you can type "rOck" and it works etc.)
-  let humanChoice = (prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):", "Rock")).toLowerCase();
+  humanChoice = (prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):", "Rock")).toLowerCase();
   // Conditional checks for humanChoice to determine Rock, Paper, or Scissors
   if (humanChoice == "rock") {
     console.log("Human choice: Rock");
@@ -106,8 +110,9 @@ function getHumanChoice() {
 //  1. Create function rockPaperScissorsGame
 function rockPaperScissorsGame() {
 //  2. Run functions to get game values
-  getComputerChoice(); // get computerChoice
+  
   getHumanChoice(); // get humanChoice
+  getComputerChoice(); // get computerChoice
 //  3. Use conditional checks to compare whether getHumanChoice or getComputerChoice wins given the rules of rock, paper, scissors
 //   if (humanChoice && computerChoice == 'rock' || humanChoice && computerChoice == 'paper' || humanChoice && computerChoice == 'scissors') {
 //   console.log("Its a tie!");
@@ -127,5 +132,3 @@ function rockPaperScissorsGame() {
     console.log("You lose! Scissors beats paper!");
   } 
 }
-
-//  3. Console.log a string depending on the outcome (as per above, like "You win! Paper beats rock" || "You lose! Paper beats rock")

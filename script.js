@@ -166,8 +166,10 @@ function printRoundScore() {
 // 3. CODE
 function printFinalScore() {
   return console.log(`
-  Total number of rounds: ${x}
-  Final score:
+  Total number of rounds: ${x - 1}
+
+  Final score
+  _________________________
   Human score: ${humanWins}
   Computer score: ${computerWins}
   `)

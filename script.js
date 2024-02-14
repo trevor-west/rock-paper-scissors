@@ -70,9 +70,9 @@ function getComputerChoice() {
 
 // 3. PSEUDOCODE
 //   1. Create variables to store human choice values
-let rock = 'Rock';
-let paper = 'Paper';
-let scissors = 'Scissors';
+let rock = 'rock';
+let paper = 'paper';
+let scissors = 'scissors';
 
 let humanChoice;
 

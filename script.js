@@ -145,6 +145,10 @@ function rockPaperScissorsGame() {
 // - Interface all in console.
 
 // 3. CODE -- skipping PSEUDOCODE because I already built it in the playGame function and am just moving it here:
+
+// 0. Create x to be a global variable so printRoundScore and printFinalScore and playGame can all access it
+let x = 0;
+
 function printRoundScore() {
   return console.log(
     `Round ${x}: 
@@ -186,7 +190,7 @@ function printFinalScore() {
 function playGame() {
 //   2. Create a for loop that starts at 0 and runs 5 times, repeating the rockPaperScissorsGame function each time 
 //   and adding the results of each game loop to humanScore and/or computerScore
-  for (let x = 1; x < 6; x++) {
+  for (x = 1; x < 6; x++) {
     rockPaperScissorsGame();
     printRoundScore();
   }

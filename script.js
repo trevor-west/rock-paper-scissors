@@ -110,6 +110,10 @@ function getHumanChoice() {
 
 // 3. PSEUDOCODE
 
+//  0. Create variables to store human or computer win values
+let humanWins = 0;
+let computerWins = 0;
+
 //  1. Create function rockPaperScissorsGame
 function rockPaperScissorsGame() {
 //  2. Run functions to get game values
@@ -122,16 +126,22 @@ function rockPaperScissorsGame() {
   if (humanChoice == computerChoice) {
     return "Its a tie! Try again!";
   } else if (humanChoice == rock && computerChoice == scissors) {
-    return"You win! Rock beats scissors!";
+    humanWins++;
+    return "You win! Rock beats scissors!";
   } else if (computerChoice == scissors && humanChoice == scissors) {
+    computerWins++;
     return "You lose! Rock beats scissors!";
   } else if (humanChoice == paper && computerChoice == rock) {
+    humanWins++;
     return "You win! Paper beats rock!";
   } else if (computerChoice == paper && humanChoice == rock) {
+    computerWins++;
     return "You lose! Paper beats rock!";
   } else if (humanChoice == scissors && computerChoice == paper) {
+    humanWins++;
     return "You win! Scissors beats paper!";
   } else if (computerChoice == scissors && humanChoice == paper) {
+    computerWins++;
     return "You lose! Scissors beats paper!";
   } else {
     return "An unknown error has occurred.";
@@ -139,22 +149,25 @@ function rockPaperScissorsGame() {
 }
 
 // BUIDLING playGame FUNCTION
-/*
-1. UNDERSTAND
-Take the rockkPaperScissorsGame function and run it in a loop five times, track the score and then print at the end
-who won (human player or computer player).
 
-2. PLAN
-- All in console, no interface
-- Use a traditional for loop alongside a unique variable for the human and computer score and then run a conditional
-check at the end to see who wins and return that result in the console.
+// 1. UNDERSTAND
+// Take the rockkPaperScissorsGame function and run it in a loop five times, track the score and then print at the end
+// who won (human player or computer player).
 
-3. PSEUDOCODE
-  1. Create a function called playGame with the variables humanScore and computerScore in the parentheses
+// 2. PLAN
+// - All in console, no interface
+// - Use a traditional for loop alongside a unique variable for the human and computer score and then run a conditional
+// check at the end to see who wins and return that result in the console.
 
-  2. Create a for loop that starts at 0 and runs 5 times, repeating the rockPaperScissorsGame function each time 
-  and adding the results of each game loop to humanScore and/or computerScore
+// 3. PSEUDOCODE
+//   1. Create a function called playGame with the variables humanScore and computerScore in the parentheses
+function playGame(humanScore, computerScore) {
+//   2. Create a for loop that starts at 0 and runs 5 times, repeating the rockPaperScissorsGame function each time 
+//   and adding the results of each game loop to humanScore and/or computerScore
+  for (let x = 0; x < 5; x++) {
+    rockPaperScissorsGame();
+  }
+}
 
-  3. Return the result of the 5 rounds of game and print this is the console.
 
-*/
+//   3. Return the result of the 5 rounds of game and print this is the console.

@@ -42,15 +42,12 @@ function getComputerChoice() {
   if(computerChoice == 100) {
     computerChoice = getRandomNumber();
   } else if(computerChoice >= 0 && computerChoice <= 32) {
-    console.log("Computer's choice: Rock");
     computerChoice = 'rock';
     return computerChoice;
   } else if (computerChoice >= 33 && computerChoice <= 65) {
-    console.log("Computer's choice: Paper");
     computerChoice = 'paper';
     return computerChoice;
   } else if (computerChoice >= 66 && computerChoice <= 99) {
-    console.log("Computer's choice: Scissors");
     computerChoice = 'scissors';
     return computerChoice;
   } else {
@@ -82,13 +79,10 @@ function getHumanChoice() {
   humanChoice = (prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):", "Rock")).toLowerCase();
   // Conditional checks for humanChoice to determine Rock, Paper, or Scissors
   if (humanChoice == "rock") {
-    console.log("Human choice: Rock");
     return rock;
   } else if (humanChoice == "paper") {
-    console.log("Human choice: Paper");
     return paper;
   } else if (humanChoice == "scissors") {
-    console.log("Human choice: Scissors");
     return scissors;
   } else if(humanChoice !== "rock" || humanChoice !== "paper" || humanChoice !== "scissors") {
     humanChoice = (prompt("Please enter either 'Rock', 'Paper', or 'Scissors' (case insensitive but you must type it exact letter-wise):", "Rock")).toLowerCase();

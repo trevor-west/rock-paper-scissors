@@ -126,23 +126,35 @@ function rockPaperScissorsGame() {
   if (humanChoice == computerChoice) {
     return "Its a tie! Try again!";
   } else if (humanChoice == rock && computerChoice == scissors) {
-    humanWins++;
-    return "You win! Rock beats scissors!";
-  } else if (computerChoice == scissors && humanChoice == scissors) {
-    computerWins++;
-    return "You lose! Rock beats scissors!";
+    console.log("Human choice: " + rock);
+    console.log("Computer choice: " + rock);
+    return humanWins++;
+    // return "You win! Rock beats scissors!";
+  } else if (computerChoice == rock && humanChoice == scissors) {
+    console.log("Human choice: " + scissors);
+    console.log("Computer choice: " + rock);
+    return computerWins++;
+    // return "You lose! Rock beats scissors!";
   } else if (humanChoice == paper && computerChoice == rock) {
-    humanWins++;
-    return "You win! Paper beats rock!";
+    console.log("Human choice: " + paper);
+    console.log("Computer choice: " + rock);
+    return humanWins++;
+    // return "You win! Paper beats rock!";
   } else if (computerChoice == paper && humanChoice == rock) {
-    computerWins++;
-    return "You lose! Paper beats rock!";
+    console.log("Human choice: " + rock);
+    console.log("Computer choice: " + paper);
+    return computerWins++;
+    // return "You lose! Paper beats rock!";
   } else if (humanChoice == scissors && computerChoice == paper) {
-    humanWins++;
-    return "You win! Scissors beats paper!";
+    console.log("Human choice: " + scissors);
+    console.log("Computer choice: " + paper);
+    return humanWins++;
+    // return "You win! Scissors beats paper!";
   } else if (computerChoice == scissors && humanChoice == paper) {
-    computerWins++;
-    return "You lose! Scissors beats paper!";
+    console.log("Human choice: " + paper);
+    console.log("Computer choice: " + scissors);
+    return computerWins++;
+    // return "You lose! Scissors beats paper!";
   } else {
     return "An unknown error has occurred.";
   }
@@ -161,7 +173,7 @@ function rockPaperScissorsGame() {
 
 // 3. PSEUDOCODE
 //   1. Create a function called playGame with the variables humanScore and computerScore in the parentheses
-function playGame(humanScore, computerScore) {
+function playGame() {
 //   2. Create a for loop that starts at 0 and runs 5 times, repeating the rockPaperScissorsGame function each time 
 //   and adding the results of each game loop to humanScore and/or computerScore
   for (let x = 0; x < 5; x++) {

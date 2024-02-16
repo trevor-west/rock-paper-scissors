@@ -38,7 +38,6 @@ let computerChoice;
 
 function getComputerChoice() {
   computerChoice = getRandomNumber();
-  // console.log("computerChoice value: " + computerChoice);
   if(computerChoice == 100) {
     computerChoice = getRandomNumber();
   } else if(computerChoice >= 0 && computerChoice <= 32) {
@@ -170,7 +169,7 @@ function printFinalScore() {
 
   Final score
   _________________________
-  Human score: ${humanWins}
+  Human score:    ${humanWins}
   Computer score: ${computerWins}
   `)
 }
